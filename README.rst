@@ -11,8 +11,10 @@ Source installation
 -------------------
 
 There is no need to build/compile pgtune, it is a Python script.
-Extracting tarball to a convenient location is sufficient.
-Note that you will need the multiple 
+Extracting the tarball to a convenient location is sufficient.
+Note that you will need the multiple
+pg_settings-<version>_<architecture> files included with the
+program too, pgtune can't work without those.
 
 RPM Installation
 ----------------
@@ -47,6 +49,9 @@ are the current parameters:
 
  * -T or --type : Specifies database type. Valid options are:
    DW, OLTP, Web, Mixed, Desktop
+
+ * -P or --platform : Specifies platform, defaults to the platform running
+   the program.  Valid options are Windows, Linux, and Darwin (Mac OS X).
 
  * -c or --connections: Specifies number of maximum connections expected.
    If not specified, it depends on database type.
@@ -96,7 +101,7 @@ License
 
 pgtune is licensed under a standard 3-clause BSD license.
 
-Copyright (c) 2009-2011, Gregory Smith
+Copyright (c) 2009-2013, Gregory Smith
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without 
